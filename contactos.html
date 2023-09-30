@@ -46,13 +46,127 @@
         <script
             defer
             src="./assets/scripts/contactos.js"
+            type="module"
         ></script>
     </head>
 
     <body>
-        <header>
+        <!--       <header>
             <div class="header-main">
-                <h1>Titulo</h1>
+                <h1 class="head-1">Titulo 1</h1>
+            </div>
+        </header> -->
+        <header class="p-3 mb-3 border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a
+                        href="/"
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
+                    >
+                        <svg
+                            class="bi me-2"
+                            width="40"
+                            height="32"
+                            role="img"
+                            aria-label="Bootstrap"
+                        >
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li>
+                            <a
+                                href="#"
+                                class="nav-link px-2 link-secondary"
+                                >Overview</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                class="nav-link px-2 link-dark"
+                                >Inventory</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                class="nav-link px-2 link-dark"
+                                >Customers</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                class="nav-link px-2 link-dark"
+                                >Products</a
+                            >
+                        </li>
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input
+                            type="search"
+                            class="form-control"
+                            placeholder="Search..."
+                            aria-label="Search"
+                        />
+                    </form>
+
+                    <div class="dropdown text-end">
+                        <a
+                            href="#"
+                            class="d-block link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <img
+                                src="https://github.com/mdo.png"
+                                alt="mdo"
+                                width="32"
+                                height="32"
+                                class="rounded-circle"
+                            />
+                        </a>
+                        <ul
+                            class="dropdown-menu text-small"
+                            aria-labelledby="dropdownUser1"
+                            style=""
+                        >
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    >New project...</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    >Settings</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    >Profile</a
+                                >
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    >Sign out</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
         <main class="box-container">
@@ -60,25 +174,26 @@
                 <section class="contacto-sidebar col-sm-12 col-md-4">
                     <section class="contacto-sidebar-title d-flex align-items-center justify-content-center">
                         <span class="material-symbols-outlined  icon-fill icon-2xl icon-agent"> support_agent </span>
-                        <h2 class="contacto-sidebar-title-h1">Contactanos</h2>
+                        <h2 class="contacto-sidebar-title-h1 head-1">Contactanos</h2>
                     </section>
                     <section class="contacto-sidebar-text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat qui ducimus illum deleniti officiis nam repellendus odio illo iure consequuntur repudiandae quam hic odit,
+                        <p class="text-d">
+                            Lorem ipsum dolor sit amet consectetur. Lorem euismod ut vulputate tincidunt sagittis. Gravida aliquet diam tristique amet sapien eget ultrices risus. Dui elit adipiscing
+                            scelerisque duis amet cursus mattis. Magna sem adipiscing magna non metus felis leo gravida. Malesuada eu.
                         </p>
                     </section>
                     <section class="contacto-sidebar-content ">
                         <div class=" d-flex align-items-center justify-content-center">
                             <span class="material-symbols-outlined icon-fill icon-2xl"> alternate_email </span>
-                            <h2>Soporte@gmail.com</h2>
+                            <h2 class="head-3">Soporte@gmail.com</h2>
                         </div>
                         <div class=" d-flex align-items-center justify-content-center">
                             <span class="material-symbols-outlined icon-fill icon-2xl"> call </span>
-                            <h2>9999-666-111</h2>
+                            <h2 class="head-3">9999-666-111</h2>
                         </div>
                         <div class=" d-flex align-items-center justify-content-center">
                             <span class="material-symbols-outlined icon-fill icon-2xl"> contact_support </span>
-                            <h2>HELP</h2>
+                            <h2 class="head-3">HELP</h2>
                         </div>
                     </section>
                 </section>
@@ -98,9 +213,11 @@
                                 class="form-control"
                                 id="validationCustom01"
                                 value="Mark"
+                                placeholder="Nombres"
                                 required
                             />
-                            <div class="valid-feedback">Looks good!</div>
+                            <div class="valid-feedback">Dato Correcto!</div>
+                            <div class="invalid-feedback">Dato incorrecto!</div>
                         </div>
                         <div class="col-sm-12 col-md-6 ">
                             <label
@@ -112,10 +229,12 @@
                                 type="text"
                                 class="form-control"
                                 id="validationCustom02"
+                                placeholder="Apellidos"
                                 value="Otto"
                                 required
                             />
-                            <div class="valid-feedback">Looks good!</div>
+                            <div class="valid-feedback">Dato Valido!</div>
+                            <div class="invalid-feedback">Dato incorrecto!</div>
                         </div>
                         <div class="col-12">
                             <label
@@ -125,13 +244,16 @@
                             >
                             <div class="input-group has-validation">
                                 <input
-                                    type="text"
+                                    type="email"
                                     class="form-control"
                                     id="validationCustomUsername"
                                     aria-describedby="inputGroupPrepend"
+                                    placeholder="correo@example.com"
                                     required
                                 />
-                                <div class="invalid-feedback">Please choose a username.</div>
+
+                                <div class="valid-feedback">Dato Valido!</div>
+                                <div class="invalid-feedback">Dato incorrecto!</div>
                             </div>
                         </div>
                         <div class="col-12">
@@ -144,13 +266,15 @@
                                 <span class="material-symbols-outlined icon-fill icon-2xl form-tel-icon"> call </span>
 
                                 <input
-                                    type="text"
+                                    type="tel"
+                                    placeholder="+52 9978905380"
                                     class="form-control form-control-input"
                                     id="validationCustomUsername"
                                     aria-describedby="inputGroupPrepend"
                                     required
                                 />
-                                <div class="invalid-feedback">Please choose a username.</div>
+                                <div class="valid-feedback">Dato Valido!</div>
+                                <div class="invalid-feedback">Dato incorrecto!</div>
                             </div>
                         </div>
                         <div class="col-12">
@@ -176,19 +300,24 @@
                                 <option>Problemas</option>
                                 <option>Otros</option>
                             </select>
-                            <div class="invalid-feedback">Please select a valid state.</div>
+                            <div class="valid-feedback">Dato Valido!</div>
+                            <div class="invalid-feedback">Dato incorrecto!</div>
                         </div>
                         <div class="col-12">
                             <label
-                                for="exampleFormControlTextarea1"
+                                for="validationTextarea"
                                 class="form-label"
                                 >Describe el motivo de tu mensaje</label
                             >
                             <textarea
                                 class="form-control"
-                                id="exampleFormControlTextarea1"
+                                id="validationTextarea"
+                                placeholder="Deja un mensaje breve sobre tu asunto"
                                 rows="3"
+                                required
                             ></textarea>
+                            <div class="valid-feedback">Mensaje valido!</div>
+                            <div class="invalid-feedback">Ingrese un Mensaje!</div>
                         </div>
                         <div class="col-12">
                             <div class="form-check">
@@ -205,10 +334,12 @@
                                 >
                                     Aceptos los Terminos y Condiciones
                                 </label>
-                                <div class="invalid-feedback">You must agree before submitting.</div>
+                                <div class="valid-feedback">Usted acepto los terminos y condiciones!</div>
+
+                                <div class="invalid-feedback">Acepte el acuerdo de terminos y condiciones.</div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-sm-12 col-md-12 text-center">
                             <button
                                 class="btn btn-3"
                                 type="submit"
@@ -221,8 +352,8 @@
             </section>
         </main>
         <footer class="footer">
-            <p>#ArtMovesWorld</p>
-            <p>Generation 2023,Mexico. Derechos reservados ™Generation and Co</p>
+            <p class="head-4">#ArtMovesWorld</p>
+            <p class="head-6">Generation 2023,Mexico. Derechos reservados ™Generation and Co</p>
         </footer>
     </body>
 </html>

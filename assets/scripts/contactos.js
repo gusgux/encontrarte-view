@@ -1,19 +1,55 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+import { validar } from "./validaciones.js";
+
 (() => {
     'use strict'
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
+    const inputs = document.querySelectorAll('input[id^="validationCustom"]')
+    const form = document.querySelector('.needs-validation')
 
+    console.log(inputs);
     // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
+    inputs.forEach(input => {
+        input.addEventListener('blur', event => {
+            if (!input.checkValidity()) {
                 event.preventDefault()
                 event.stopPropagation()
             }
 
-            form.classList.add('was-validated')
+            input.parentElement.classList.add('was-validated')
         }, false)
     })
+    form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+    }, false)
+
+
 })()
+
+
+/* (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('input[id^="validationCustom"]')
+    // Loop over them and prevent submission
+    forms.forEach(form => {
+        form.addEventListener('blur', event => {
+            console.log(form.checkValidity());
+            console.log(form);
+            console.log("evento" + event.target);
+            if (form.checkValidity()) {
+                console.log(form);
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.parentElement.classList.add('was-validated')
+        }, false)
+    })
+})() */
